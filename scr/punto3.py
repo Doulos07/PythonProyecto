@@ -1,13 +1,14 @@
 import paths
 import csv
 
+ruta = paths.trimestres_individual
 
-with paths.trimestres_individual.open() as archivo :
+with ruta.open() as archivo :
      read = csv.DictReader(archivo, delimiter=';')
      headers = read.fieldnames + ['CH04_str']
      filas = list(read)
 
-with paths.trimestres_individual.open('w', newline = '', encoding = 'utf-8') as archivo :
+with ruta.open('w', newline = '', encoding = 'utf-8') as archivo :
       write = csv.DictWriter(archivo,fieldnames= headers, delimiter= ';')
       write.writeheader()
 

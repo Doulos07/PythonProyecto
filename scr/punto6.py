@@ -1,12 +1,14 @@
 import csv
 import paths
 
-with paths.trimestres_individual.open () as dataSetIndividual:
+ruta = paths.trimestres_individual
+
+with ruta.open () as dataSetIndividual:
     data = csv.DictReader(dataSetIndividual,delimiter=";")
     datos = list(data)
     titulo_nuevo = data.fieldnames + ["UNIVERSITARIO"]
 
-with paths.trimestres_individual.open ("w", newline='') as dataSetIndividual:
+with ruta.open ("w", newline='') as dataSetIndividual:
     data = csv.DictWriter(dataSetIndividual,fieldnames=titulo_nuevo,delimiter=";")
     data.writeheader()
     for line in datos:
