@@ -18,7 +18,7 @@ with ruta.open(encoding='utf-8') as dataSetIndividual :
     datos = list(data)
     titulo_nuevo = data.fieldnames + ['NIVEL_ED_str']
 
-with ruta.open('w', newline='') as dataSetIndividual:
+with ruta.open('w', newline='', encoding = 'utf-8') as dataSetIndividual:
     data = csv.DictWriter(dataSetIndividual,fieldnames=titulo_nuevo,delimiter=";")
     data.writeheader()
     for fila in datos:

@@ -17,7 +17,7 @@ with ruta.open(encoding='utf-8') as archivo :
      headers = read.fieldnames + ['TIPO_HOGAR']
      data = list(read)
 
-with ruta.open('w', newline='') as archivo :
+with ruta.open('w', newline='', encoding = 'utf-8') as archivo :
      write = csv.DictWriter(archivo, headers, delimiter=';')
      write.writeheader()
 
