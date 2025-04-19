@@ -1,3 +1,7 @@
+#Dentro del Proyecto
+datasets/Trimestre/
+procesamiento.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

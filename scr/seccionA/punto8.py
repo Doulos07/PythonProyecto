@@ -22,5 +22,5 @@ with ruta.open('w', newline='', encoding = 'utf-8') as archivo :
      write = csv.DictWriter(archivo, headers, delimiter=';')
      write.writeheader()
      for filas in data :
-         filas['MATERIAL_TECHUMBRE'] = tipo_hogar(int(filas['V4']))
+         filas['MATERIAL_TECHUMBRE'] = tipo_hogar(int(filas['IV4']))
          write.writerow(filas)
