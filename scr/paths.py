@@ -1,5 +1,7 @@
 from pathlib import Path
 
+rutas = []
+
 primer_trimestre = Path("datasets") / "1erTrimestre"
 primer_hogar = primer_trimestre / "usu_hogar_T124.txt"
 primer_individual = primer_trimestre / "usu_individual_T124.txt"
@@ -15,3 +17,10 @@ tercer_individual = tercer_trimestre / "usu_individual_T324.txt"
 trimestres = Path("datasets") / "Trimestres"
 trimestres_hogar = trimestres / "usu_hogar.txt"
 trimestres_individual = trimestres / "usu_individual.txt"
+
+rutas.extend([
+    primer_individual, primer_hogar,
+    segundo_individual, segundo_hogar,
+    tercer_individual, tercer_hogar,
+    trimestres_individual, trimestres_hogar
+])
